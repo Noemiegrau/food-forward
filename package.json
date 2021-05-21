@@ -1,0 +1,31 @@
+{
+  "name": "food-forward",
+  "version": "1.0.0",
+  "description": "## **_Table of contents_** * [Description of the project](#description-of-the-project) * [Technologies used](#technologies-used) * [Usage](#usage) * [Installation](#installation) * [Link URL to GitHub Repository](#link-URL-to-GitHub-repository) * [Link URL of deployed app to Heroku](#link-URL-of-deployed-app-to-Heroku)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noemiegrau/food-forward.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noemiegrau/food-forward/issues"
+  },
+  "homepage": "https://github.com/Noemiegrau/food-forward#readme",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "path": "^0.12.7",
+    "sequelize": "^6.6.2"
+  }
+}
