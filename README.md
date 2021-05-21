@@ -40,6 +40,6 @@ Here are some guidelines for installing the project on your local machine in ord
 4. Enjoy and don't hesitate to contribute!
 
 ## **_Link URL to GitHub Repository_**
-https://github.com/Noemiegrau/??????????
+https://github.com/Noemiegrau/food-forward
 
 ## **_Link URL of deployed app to Heroku_**
