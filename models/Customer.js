@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Customer extends Model {}
 
-// create fields/columns for User model
+// create fields/columns for Customer model
 Customer.init(
     {
       id: {
