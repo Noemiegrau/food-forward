@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS comments;
 DROP TABLE IF EXISTS post;
-DROP TABLE IF EXISTS post;
+DROP TABLE IF EXISTS post_likes;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS staff;
 
@@ -26,7 +26,7 @@ CREATE TABLE customers (
 
 CREATE TABLE post_likes (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    staff_id INTEGER NOT NULL;
+    staff_id INTEGER NOT NULL,
     post_id INTEGER NOT NULL
 );
 
