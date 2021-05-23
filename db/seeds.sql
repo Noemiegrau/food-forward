@@ -5,7 +5,7 @@ VALUES
 ('Hazel', 'Nutt', 03, 'hnutt@yahoo.com', 'koasteseppethiveliulti'),
  ('James', 'Fraser', 04, 'jf@goldenbough.edu', 'swutorshifitassastezra'),
   ('Jack', 'London', 05 'jlondon@ualaska.edu', 'reabilismignideop'),
-  ('Robert', 'Bruce', 06, 'rbruce@scotland.net', 'boitionwancessoncuntry'),
+  ('Robert', 'Bruce', 06, 'rbruce@scotland.net', 'boitionwancessoncuntry');
  
  INSERT INTO customers (first_name, last_name, age, in_household, package, date_received)
  VALUES
@@ -20,4 +20,4 @@ VALUES
   ('Sissy', 'Coalpits', 41, 4, 2, '2021-04-23'),
   ('Antoinette', 'Capet',39, 3, 1, '2021-04-23'),
   ('Samuel', 'Delany',35, 5, 3, '2021-04-23'),
-  ('Tony', 'Duvert',37, 6, 3, '2021-04-23'),
+  ('Tony', 'Duvert',37, 6, 3, '2021-04-23');
