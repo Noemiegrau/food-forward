@@ -54,7 +54,8 @@ Customer.init(
     },
     {
       sequelize,
-      timestamps: false,
+      timestamps: true,
+      // timestamps: false,?
       freezeTableName: true,
       underscored: true,
       modelName: 'customer'
