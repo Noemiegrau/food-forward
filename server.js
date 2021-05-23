@@ -7,10 +7,6 @@ const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -37,11 +33,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require('./controllers/'));
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Hello Hectapods!'
-    });
-});
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
