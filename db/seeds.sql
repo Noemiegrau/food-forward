@@ -4,7 +4,7 @@ VALUES
 ('Chris', 'Cod', 02, 'ccod@gmail.com', 'vaibrandobaxotonths'),
 ('Hazel', 'Nutt', 03, 'hnutt@yahoo.com', 'koasteseppethiveliulti'),
  ('James', 'Fraser', 04, 'jf@goldenbough.edu', 'swutorshifitassastezra'),
-  ('Jack', 'London', 05 'jlondon@ualaska.edu', 'reabilismignideop'),
+  ('Jack', 'London', 05, 'jlondon@ualaska.edu', 'reabilismignideop'),
   ('Robert', 'Bruce', 06, 'rbruce@scotland.net', 'boitionwancessoncuntry');
  
  INSERT INTO customers (first_name, last_name, age, in_household, package, date_received)

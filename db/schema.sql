@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS comments;
 DROP TABLE IF EXISTS post;
-DROP TABLE IF EXISTS post_likes;
+DROP TABLE IF EXISTS postlikes;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS staff;
 
 
-Create TABLE staff(
+Create TABLE staff (
     iD INTEGER AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE customers (
     date_received DATE NOT NULL
 );
 
-CREATE TABLE post_likes (
+CREATE TABLE postlikes (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     staff_id INTEGER NOT NULL,
     post_id INTEGER NOT NULL
