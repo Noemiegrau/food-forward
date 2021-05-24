@@ -4,7 +4,7 @@ const { Post, Staff, Comment, Customer, Like } = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
-    res.render('login')
+    res.render('contact-us')
 });
 
   module.exports = router;

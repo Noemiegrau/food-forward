@@ -30,7 +30,8 @@ app.set('view engine', 'handlebars');
 // Express MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static('views/images')); 
 
 // turn on routes
 app.use(routes);
