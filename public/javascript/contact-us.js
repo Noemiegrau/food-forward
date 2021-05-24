@@ -17,8 +17,16 @@ const sendMail = (mail) => {
         method: "post",
         body: mail,
 
-    }).then((response) => {
-        return response.json();
+    })
+    
+    // .then((response) => {
+    //     return response.json();
+    // });
+
+    .then(response => res.json(response))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
     });
 };
 
