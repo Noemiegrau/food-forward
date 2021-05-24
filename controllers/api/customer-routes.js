@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const Customer = require('../../models/Customer');
 const { Staff, Like, Comment, Post } = require('../../models');
-const { aggregate } = require('../../models/Customer');
 
 // get all customers
 router.get('/', (req, res) => {
