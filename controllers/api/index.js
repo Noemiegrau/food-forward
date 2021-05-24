@@ -6,7 +6,7 @@ const postRoutes = require('./post-routes');
 const staffRoutes = require('./staff-routes');
 
 router.use('/customers', customerRoutes);
-router.use('/posts', postRoutes);
+router.use('/post', postRoutes);
 router.use('/staff', staffRoutes);
 router.use('/comment', commentRoutes);
 

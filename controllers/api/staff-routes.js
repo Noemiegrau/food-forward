@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Staff, Like, Comment, Post } = require('../../models');
+const { Staff, Liked, Comment, Post } = require('../../models');
 
 // get all Staffs
 router.get('/', (req, res) => {
@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
       {
         model: Post,
         attributes: ['post_text'],
-        through: Like,
+        through: Liked,
         as: 'liked_posts'
       }
     ]
