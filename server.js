@@ -60,7 +60,7 @@ transporter.verify(function (error, success) {
 });
 
 // POST route for NODEMAILER contact form
-app.post("/send", (req, res) => {
+app.post("/contact-us/send", (req, res) => {
 // Accepts the form data submitted and parse it using multiparty
 let form = new multiparty.Form();
 let data = {};
