@@ -47,9 +47,10 @@ const transporter = nodemailer.createTransport({
   port: 465, //if not working try 25, 465, 587 or 2525
   secure: true,
   auth: {
+    type: 'OAuth2',
     user: process.env.DB_EMAIL,
     pass: process.env.DB_PASS,
-  },
+  }
 });
 
 // verify connection configuration
