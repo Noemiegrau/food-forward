@@ -1,11 +1,12 @@
 const router = require('express').Router();
+
 const Staff = require('../../models/Staff');
 const { Staff, Like, Comment, Post } = require('../../models');
 const { aggregate } = require('../../models/Staff');
 
 // get all staff
 router.get('/', (req, res) => {
-    Customer.findAll({})
+    Staff.findAll({})
         .then(dbStaffData => res.json(dbStaffData))
         .catch(err => {
             console.log(err);
@@ -39,3 +40,8 @@ router.get('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+ 
+
+module.exports = router;
+
