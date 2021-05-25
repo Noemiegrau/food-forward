@@ -1,7 +1,7 @@
 // import all models
 const Post = require('./Post');
 const Staff = require('./Staff');
-const Like = require('./Like');
+const Liked = require('./Liked');
 const Comment = require('./Comment');
 
 // create associations
@@ -15,7 +15,7 @@ Staff.hasMany(Post, {
   });
   
   Staff.belongsToMany(Post, {
-    through: Like,
+    through: Liked,
     as: 'liked_posts',
     // as: 'voted_posts', ????
     foreignKey: 'staff_id',
@@ -23,27 +23,27 @@ Staff.hasMany(Post, {
   });
   
   Post.belongsToMany(Staff, {
-    through: Like,
+    through: Liked,
     as: 'liked_posts',
     foreignKey: 'post_id',
     onDelete: 'SET NULL'
   });
   
-  Like.belongsTo(Staff, {
+  Liked.belongsTo(Staff, {
     foreignKey: 'staff_id',
     onDelete: 'SET NULL'
   });
   
-  Like.belongsTo(Post, {
+  Liked.belongsTo(Post, {
     foreignKey: 'post_id',
     onDelete: 'SET NULL'
   });
   
-  Staff.hasMany(Like, {
+  Staff.hasMany(Liked, {
     foreignKey: 'staff_id'
   });
   
-  Post.hasMany(Like, {
+  Post.hasMany(Liked, {
     foreignKey: 'post_id'
   });
   
@@ -66,4 +66,4 @@ Staff.hasMany(Post, {
     foreignKey: 'post_id'
   });
   
-  module.exports = { Staff, Post, Like, Comment };
+  module.exports = { Staff, Post, Liked, Comment };

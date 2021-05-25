@@ -33,6 +33,13 @@ Staff.init(
           len: [1]
         }
       },
+      // username: {
+      //   type: DataTypes.STRING,
+      //   allowNull: false,
+      //   validate: {
+      //     len: [1]
+      //   }
+      // },
       staff_number: {
         type: DataTypes.INTEGER,
         allowNull: false

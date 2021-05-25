@@ -2,9 +2,9 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, Staff, Comment, Customer, Liked } = require('../models');
 
-// get login page
+// get all posts for homepage
 router.get('/', (req, res) => {
-  res.render('login')
+    res.render('contact-us')
 });
 
-module.exports = router;
+  module.exports = router;

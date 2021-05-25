@@ -45,8 +45,8 @@ const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com", //email provider is gmail
   port: 587, //if not working try 25, 465 or 2525
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASS,
+    user: process.env.DB_EMAIL,
+    pass: process.env.DB_PASS,
   },
 });
 
@@ -73,7 +73,7 @@ form.parse(req, function (err, fields) {
 // Create a mail object
 const mail = {
   from: data.name,
-  to: process.env.EMAIL,
+  to: process.env.DB_EMAIL,
   subject: data.subject,
   text: `${data.name} <${data.email}> \n${data.message}`,
 };
