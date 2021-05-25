@@ -44,6 +44,7 @@ app.use(express.static('views/images'));
 const transporter = nodemailer.createTransport({
   host: "smtp-mail.outlook.com", //email provider is gmail
   port: 587, //if not working try 25, 465, 587 or 2525
+  secure: false,
   auth: {
     user: process.env.DB_EMAIL,
     pass: process.env.DB_PASS,

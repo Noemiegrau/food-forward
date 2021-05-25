@@ -12,7 +12,7 @@ const formEvent = form.addEventListener("submit", (event) => {
 
 // 
 const sendMail = (mail) => {
-
+    // fetch("https://stark-reaches-12893.herokuapp.com/contact-us/send", {
     fetch("https://stark-reaches-12893.herokuapp.com/contact-us/send", {
         method: "POST",
         body: mail,
