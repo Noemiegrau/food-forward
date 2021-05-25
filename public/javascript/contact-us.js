@@ -19,15 +19,15 @@ const sendMail = (mail) => {
 
     })
     
-    // .then((response) => {
-    //     return response.json();
-    // });
-
-    .then(response => res.json(response))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+    .then((response) => {
+        return response.json();
     });
+
+    // .then(response => res.json(response))
+    // .catch(err => {
+    //   console.log(err);
+    //   res.status(500).json(err);
+    // });
 };
 
 // cf nodemailer tutorial at https://github.com/victoria-lo/Nodemailer-Tutorial
