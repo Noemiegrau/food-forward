@@ -14,7 +14,7 @@ const formEvent = form.addEventListener("submit", (event) => {
 const sendMail = (mail) => {
 
     fetch("https://stark-reaches-12893.herokuapp.com/send", {
-        method: "post",
+        method: "POST",
         body: mail,
 
     })
