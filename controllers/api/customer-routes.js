@@ -1,16 +1,20 @@
 const router = require('express').Router();
 const Customer = require('../../models/Customer');
-const { Staff, Like, Comment, Post } = require('../../models');
+const { Staff, Liked, Comment, Post } = require('../../models');
+// const inputCheck = require('../../utils/inputCheck');
+
 
 // get all customers
 router.get('/', (req, res) => {
     Customer.findAll({})
+
     .then(dbCustomerData => res.json(dbCustomerData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
     })
 });
+
 
 // get a single customer
 router.get('/:id', (req, res) => {
@@ -23,6 +27,7 @@ router.get('/:id', (req, res) => {
             'household',
             'package',
             'date_received'
+
         ],
         where: {
             id: req.params.id
