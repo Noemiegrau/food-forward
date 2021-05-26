@@ -42,12 +42,10 @@ app.use(express.static('views/images'));
 
 // create transporter object
 const transporter = nodemailer.createTransport({
-  service: "gmail",
   host: "smtp.gmail.com", //email provider is gmail
-  port: 465, //if not working try 25, 465, 587 or 2525
-  secure: true,
+  port: 465, //if not working try 25, 465, 587 or 2525 // 465 is always true
+  // secure: true,
   auth: {
-    type: 'OAuth2',
     user: process.env.DB_EMAIL,
     pass: process.env.DB_PASS,
   }
@@ -63,7 +61,7 @@ transporter.verify(function (error, success) {
 });
 
 // POST route for NODEMAILER contact form
-app.post("/send", (req, res) => {
+app.post("/contact-us/send", (req, res) => {
 // Accepts the form data submitted and parse it using multiparty
 let form = new multiparty.Form();
 let data = {};

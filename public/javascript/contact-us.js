@@ -12,8 +12,8 @@ const formEvent = form.addEventListener("submit", (event) => {
  
 // 
 const sendMail = (mail) => {
-    fetch("https://stark-reaches-12893.herokuapp.com/contact-us/send", {
-    // fetch("http://localhost:3000/contact-us/send", {
+    // fetch("https://stark-reaches-12893.herokuapp.com/contact-us/send", {
+    fetch("http://localhost:3000/contact-us/send", {
         method: "POST",
         body: mail,
 
