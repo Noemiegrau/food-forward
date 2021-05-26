@@ -9,7 +9,7 @@ const formEvent = form.addEventListener("submit", (event) => {
     sendMail(mail);
 
 });
-
+ 
 // 
 const sendMail = (mail) => {
     fetch("https://stark-reaches-12893.herokuapp.com/contact-us/send", {
