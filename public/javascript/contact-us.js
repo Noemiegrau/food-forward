@@ -9,25 +9,27 @@ const formEvent = form.addEventListener("submit", (event) => {
     sendMail(mail);
 
 });
-
+ 
 // 
 const sendMail = (mail) => {
-
-    fetch("https://stark-reaches-12893.herokuapp.com//send", {
-        method: "post",
+    fetch("https://stark-reaches-12893.herokuapp.com/contact-us/send", {
+    // fetch("http://localhost:3000/contact-us/send", {
+        method: "POST",
         body: mail,
 
     })
     
-    // .then((response) => {
-    //     return response.json();
-    // });
-
-    .then(response => res.json(response))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+    .then((response) => {
+        return response.json();
     });
+
+//     // .then(response => res.json(response))
+//     // .catch(err => {
+//     //   console.log(err);
+//     //   res.status(500).json(err);
+//     // });
 };
+
+
 
 // cf nodemailer tutorial at https://github.com/victoria-lo/Nodemailer-Tutorial

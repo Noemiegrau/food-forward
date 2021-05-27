@@ -7,8 +7,8 @@ const cors = require("cors");
 const routes = require('./controllers');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-//const helpers = require('./utils/helpers');
-const hbs = exphbs.create({});
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -40,15 +40,16 @@ app.use(cors({ origin: "*" }));
 app.use(express.static(path.join(__dirname, './public')));
 app.use(express.static('views/images')); 
 
-// // create transporter object
-// const transporter = nodemailer.createTransport({
-//   host: "smtp.gmail.com", //email provider is gmail
-//   port: 587, //if not working try 25, 465 or 2525
-//   auth: {
-//     user: process.env.DB_EMAIL,
-//     pass: process.env.DB_PASS,
-//   },
-// });
+// create transporter object
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com", //email provider is gmail
+  port: 465, //if not working try 25, 465, 587 or 2525 // 465 is always true
+  // secure: true,
+  auth: {
+    user: process.env.DB_EMAIL,
+    pass: process.env.DB_PASS,
+  }
+});
 
 // verify connection configuration
 // transporter.verify(function (error, success) {
@@ -60,7 +61,7 @@ app.use(express.static('views/images'));
 // });
 
 // POST route for NODEMAILER contact form
-app.post("/send", (req, res) => {
+app.post("/contact-us/send", (req, res) => {
 // Accepts the form data submitted and parse it using multiparty
 let form = new multiparty.Form();
 let data = {};

@@ -41,7 +41,7 @@ Staff.init(
       //   }
       // },
       staff_number: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
       },
       email: {

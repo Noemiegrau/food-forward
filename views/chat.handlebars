@@ -1,1 +1,28 @@
 <h1>Chat Page</h1>
+
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Write your new post here: </label>
+      <input type="text" id="post-text" name="post-text" />
+      <button type="submit" class="btn">Post</button>
+    </div>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Previous Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/chat.js" ></script>

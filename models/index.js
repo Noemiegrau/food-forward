@@ -3,6 +3,7 @@ const Post = require('./Post');
 const Staff = require('./Staff');
 const Liked = require('./Liked');
 const Comment = require('./Comment');
+const Customer = require('./Customer');
 
 // create associations
 Staff.hasMany(Post, {
@@ -66,4 +67,4 @@ Staff.hasMany(Post, {
     foreignKey: 'post_id'
   });
   
-  module.exports = { Staff, Post, Liked, Comment };
+  module.exports = { Staff, Post, Liked, Comment, Customer };
