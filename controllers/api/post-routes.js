@@ -87,6 +87,7 @@ router.get('/', (req, res) => {
       });
   });
 
+  // PUT /api/posts/uplike
   router.put('/uplike', (req, res) => {
     // make sure the session exists first
     if (req.session) {
