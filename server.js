@@ -7,8 +7,8 @@ const cors = require("cors");
 const routes = require('./controllers');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-//const helpers = require('./utils/helpers');
-const hbs = exphbs.create({});
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({ helpers });
 const app = express();
 const PORT = process.env.PORT || 3000;
 

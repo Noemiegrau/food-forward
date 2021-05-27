@@ -80,6 +80,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// this route will be found at http://localhost:3000/api/staff/login (/:id)
 router.post('/login', (req, res) => {
   Staff.findOne({
     where: {

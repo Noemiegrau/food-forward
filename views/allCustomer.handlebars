@@ -1,1 +1,25 @@
-<h1>View All Customers</h1>
+<div class="container-fluid">
+        <div class="row">    
+            <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+                <ul class="sidenav admin-sidenav list-unstyled">
+                    <li><h4><a href="#">Add a new customer</a></h4></li>               
+                </ul>
+            </div> 
+            <div id="admin-main-control" class="col-md-10 p-x-3 p-y-1">
+
+                <div class="main-content">
+                    <h3>Customers List</h3>
+                    {{#each this}}
+                    <section class="customers">
+                        <div class="meta">
+                        <a href="#">{{staff.first_name}} Jane Doe {{staff.last_name}}</a>
+                        </div>
+                    </section>
+                    {{/each}}
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <script src="/javascript/allCustomer.js" ></script>

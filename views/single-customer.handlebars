@@ -1,1 +1,24 @@
-<h1>Single Customer</h1>
+<div class="container-fluid">
+        <div class="row">    
+            <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+                <ul class="sidenav admin-sidenav list-unstyled">
+                    <li><h4><a href="#">Update this customer</a></h4></li>       
+                    <li><h4><a href="#">Delete this customer</a></h4></li>           
+                </ul>
+            </div> 
+            <div id="admin-main-control" class="col-md-10 p-x-3 p-y-1">
+
+                <div class="main-content">
+                    <h3>{{customer.first_name}} Jane Doe {{customer.last_name}}</h3>
+
+                        <p>Age: {{customer.age}}</p>
+                        <p>Household of: {{customer.household}}</p>
+                        <p>Package received: {{customer.package}}</p>
+                        <p>Date received: {{customer.date_received}}</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/javascript/single-customer.js" ></script>
