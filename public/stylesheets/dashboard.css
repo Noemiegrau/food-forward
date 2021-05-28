@@ -6,8 +6,8 @@ body {
 }
 
 .admin-sidenav {
-    width: auto;
-	height: auto;
+    /* width: auto;
+	height: auto; */
 	margin-left: 0px; 
 }
 .admin-sidenav a {
@@ -23,7 +23,7 @@ body {
 	border: 1px solid blue; 
 }
 .admin-sidenav li a {
-	color: #fff; 
+	color: rgb(27, 12, 235); 
 }
 
 .admin-sidenav li a:active {
@@ -41,4 +41,14 @@ body {
 
 .admin-sidenav li:active {
 	border-color: #02d3f5; 
+}
+
+#admin-sidebar{
+	width: 50%;
+	
+	
+}
+
+.dashboardout{
+	margin-top: 60px;
 }
