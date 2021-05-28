@@ -8,21 +8,27 @@
       <label for="post-title">Write your new post here: </label>
       <input type="text" id="post-text" name="post-text" />
       <button type="submit" class="btn">Post</button>
+      {{post_text}}
     </div>
   </form>
 </section>
 
-{{#if posts.length}}
-<section>
-  <h2>Previous Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+<ol class="post-list">
+{{#each posts as |post|}}
+  <li>
+    <article class="post">
+      <div class="text">
+        <p>{{post_text}}</p>
+      </div>
+      <div class="meta">
+        By {{post.staff.first_name}} {{post.staff.last_name}} on
+        {{format_date created_at}} | {{liked_count}} {{format_plural "like" liked_count}}
+        |
+        <p>{{comments.length}} {{format_plural "comment" comments.length}}</p>
+      </div>
+    </article>
+  </li>
+  {{/each}}
+</ol>
 
 <script src="/javascript/chat.js" ></script>

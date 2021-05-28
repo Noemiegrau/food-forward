@@ -54,6 +54,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// create a staff member
 router.post('/', (req, res) => {
   Staff.create({
     first_name: req.body.first_name,
@@ -114,6 +115,7 @@ router.post('/login', (req, res) => {
   });
 });
 
+// update a staff member
 router.put('/:id', (req, res) => {
   // pass in req.body instead to only update what's passed through
   Staff.update(req.body, {
@@ -135,6 +137,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete a staff member
 router.delete('/:id', (req, res) => {
   Staff.destroy({
     where: {
@@ -154,17 +157,26 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-// router.post('/logout', (req, res) => {
-//   if (req.session.loggedIn) {
-//     req.session.destroy(() => {
-//       res.status(204).end();
-//     });
-//   } else {
-//     res.status(404).end();
-//   }
-// });
+// logout logic destroys the session
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 module.exports = router;
+
+
+
+
+
+
+
+
 
 
 // const Staff = require('../../models/Staff');
