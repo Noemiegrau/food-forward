@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Staff, Liked, Comment, Post } = require('../../models');
 
-// get all users
+// get all posts
 router.get('/', (req, res) => {
     console.log('======================');
     Post.findAll({
@@ -87,6 +87,7 @@ router.get('/', (req, res) => {
       });
   });
 
+  // PUT /api/posts/uplike
   router.put('/uplike', (req, res) => {
     // make sure the session exists first
     if (req.session) {

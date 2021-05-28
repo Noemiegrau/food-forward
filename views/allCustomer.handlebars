@@ -9,10 +9,10 @@
 
                 <div class="main-content">
                     <h3>Customers List</h3>
-                    {{#each this}}
+                    {{#each customers as |customer|}}
                     <section class="customers">
                         <div class="meta">
-                        <a href="#">{{staff.first_name}} Jane Doe {{staff.last_name}}</a>
+                        <a href="http://localhost:3000/single-customer/{{customer.id}}">{{customer.first_name}} {{customer.last_name}}</a>
                         </div>
                     </section>
                     {{/each}}
