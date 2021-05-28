@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-// const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 require("dotenv").config();
 const cors = require("cors");
