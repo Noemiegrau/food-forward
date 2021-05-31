@@ -26,7 +26,7 @@
                 <a href="/dashboard">Dashboard</a>
             </li> --}}
             <li>
-                <a href="/welcome-page"> &#8592; Go back</a>
+                <a id="gobackbtn" href="/welcome-page"> &#8592; Go back</a>
             </li>
           </ul>  
         </nav>
@@ -44,13 +44,13 @@
                             <input type="password" id="password-login" class="form-control" placeholder="Your Password *" />
                         </div>
                         <div class="form-group">
-                            <input type="submit" onclick="handleSubmit()" class="btnSubmit" value="Login" />
+                            <input id="loginpagebutton" type="submit" onclick="handleSubmit()" class="btnSubmit" value="Login" />
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6 login-form-2">
+                <div id="div-form-sign-up" class="col-md-6 login-form-2">
                     <h3>Create an account</h3>
-                    <form>
+                    <form id="create-account-form" >
                         <div class="form-group">
                             <input type="text" id="first-name-signup" class="form-control" placeholder="Your First Name *" />
                         </div>
@@ -67,7 +67,7 @@
                             <input type="password" id="password-signup" class="form-control" placeholder="Your Password *" />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Sign up" />
+                            <input id="sign-up-btn" type="submit" class="btnSubmit" value="Sign up" />
                         </div>
                     </form>
                 </div>

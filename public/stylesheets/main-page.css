@@ -48,25 +48,98 @@ nav ul li a {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* nav ul li button {
+nav ul li button {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-} */
+}
 
 nav ul li a:hover {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+nav ul li button:hover {
     background: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
 }
 
-/* nav ul li button:hover {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    border-radius: 15px;
-    text-shadow: none;
-} */
+/* LOGIN PAGE */
 
-/* HEADER / NAVBAR STYLES END */
+#loginpagebutton {
+background-color: #FFC107;
+}
+
+#loginpagebutton {
+    background-color: #FFC107;
+}
+
+#div-form-sign-up {
+    background-color: #FFC107;
+}
+
+#create-account-form {
+    background-color: #FFC107;
+}
+
+#sign-up-btn {
+    color: #FFC107;
+}
+
+#gobackbtn {
+    color: #FFC107;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #FFC107;
+    color: white;
+    padding: 40px;
+}
+
+/* WELCOME PAGE */
+
+#login-btn-welcome {
+    background-color: #FFC107;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 0.8vw;
+}
+
+#slogan {
+    /* color: #f09000; */
+    color: black;
+    padding: 10px 15px;
+    font-size: 1.8vw;
+}
+
+#container-welcome-page {
+    padding: 70px;
+}
+
+#img-welcome{
+    width: 80%;
+}
+
+.span-slogan {
+    color: #FFC107;
+}
+
+.col-leftt {
+padding-top: 200px;
+padding-left: 100px;
+}
+
+#div-btn-wel {
+    padding-left: 80px;
+    padding-top: 15px;
+}
