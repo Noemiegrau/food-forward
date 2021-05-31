@@ -1,3 +1,37 @@
+<div id ="alert" class="alert alert-success hide" role="alert">
+
+  <div class="alert-content">
+
+    <div class="alert-header">
+      <button id ="delete-btn" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="alert-body">
+      <p id="alert-message">Account created successfully, you are now logged in!</p>
+    </div>
+
+  </div>
+
+</div>
+
+        <nav>
+          <!--Unordered list element-->
+          <ul>
+            <!--List item element-->
+                <!--Anchor element-->
+            {{!-- <li>
+                <a id="dashboard-button" href="">Dashboard</a>
+                <a href="/dashboard">Dashboard</a>
+            </li> --}}
+            <li>
+                <a href="/welcome-page"> &#8592; Go back</a>
+            </li>
+          </ul>  
+        </nav>
+
+<div id="main-container" class="">
 <div class="container login-container">
             <div class="row">
                 <div class="col-md-6 login-form-1">
@@ -10,7 +44,7 @@
                             <input type="password" id="password-login" class="form-control" placeholder="Your Password *" />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" />
+                            <input type="submit" onclick="handleSubmit()" class="btnSubmit" value="Login" />
                         </div>
                     </form>
                 </div>
@@ -39,5 +73,6 @@
                 </div>
             </div>
         </div>
-
+</div>
         <script src="/javascript/login.js" ></script>
+        {{!-- <script type="text/javascript" src="/javascript/email-set-localStorage.js" ></script> --}}

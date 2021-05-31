@@ -1,18 +1,94 @@
+{{!-- Add customer alert message--}}
+<div id ="alert-add" class="alert alert-success hide" role="alert">
+
+  <div class="alert-content">
+
+    <div class="alert-header">
+      <button id ="delete-btn-add" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="alert-body">
+      <p id="alert-message">New customer added successfully.</p>
+    </div>
+
+  </div>
+
+</div>
+
+        <nav>
+          <!--Unordered list element-->
+          <ul>
+            <!--List item element-->
+                <!--Anchor element-->
+            <li>
+                {{!-- <a id="dashboard-button" href="">Dashboard</a> --}}
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="/packages">Packages</a>
+            </li>
+            <li>
+                <a href="/chat">Chat</a>
+            </li>
+            <li>
+                <a href="/contact-us">Contact Us</a>
+            </li>
+            <li>
+                <a id="logout" href="">Logout</a>
+            </li>
+          </ul>  
+        </nav>
+
+<div id="main-container" class="">
 <div class="container-fluid">
         <div class="row">    
-            <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+            {{!-- <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
-                    <li><h4><a href="#">Add a new customer</a></h4></li>               
+                    <li><h4><a href="/dashboard">View dashboard</a></h4></li>       
+                    <li><h4><a id="dashboard-button" href="">View dashboard</a></h4></li>
                 </ul>
-            </div> 
+            </div>  --}}
             <div id="admin-main-control" class="col-md-10 p-x-3 p-y-1">
+
+                <section>
+                {{!-- Create post --}}
+                <h2>Add New Customer</h2>
+
+                <form class="new-customer-form">
+                    <div>
+                    <label for="first_name">Add first name: </label>
+                    <input type="text" id="customer-text" name="first_name" />
+</br>
+                    <label for="last_name">Add last name: </label>
+                    <input type="text" id="customer-text" name="last_name" />
+</br>
+                    <label for="age">Add age: </label>
+                    <input type="text" id="customer-text" name="age" />
+</br>
+                    <label for="household">Add number of people in household: </label>
+                    <input type="text" id="customer-text" name="household" />
+</br>
+                    <label for="package">Add type of food package received: </label>
+                    <input type="text" id="customer-text" name="package" />
+</br>
+                    <label for="date_received">Add date of package reception: </label>
+                    <input type="text" id="customer-text" name="date_received" />
+</br>
+                    <button type="submit" class="btn">Confirm new customer information</button>
+</br>
+
+                    </div>
+                </form>
+                </section>
 
                 <div class="main-content">
                     <h3>Customers List</h3>
                     {{#each customers as |customer|}}
                     <section class="customers">
                         <div class="meta">
-                        <a href="http://localhost:3000/single-customer/{{customer.id}}">{{customer.first_name}} {{customer.last_name}}</a>
+                        <a href="/single-customer/{{customer.id}}">{{customer.first_name}} {{customer.last_name}}</a>
                         </div>
                     </section>
                     {{/each}}
@@ -22,4 +98,6 @@
             </div>
         </div>
     </div>
-        <script src="/javascript/allCustomer.js" ></script>
+</div>
+    <script src="/javascript/allCustomer.js" ></script>
+      <script src="/javascript/logout.js"></script>

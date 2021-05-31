@@ -70,7 +70,7 @@ router.post('/', (req, res) => {
         req.session.staff_id = dbStaffData.id;
         // req.session.user_id = dbStaffData.id; ??
         req.session.email = dbStaffData.email;
-        req.session.loggedIn = true;
+        req.session.loggedIn = false;
 
         res.json(dbStaffData);
       })
@@ -100,7 +100,7 @@ router.post('/login', (req, res) => {
       return;
     }
 
-    req.session.save(() => {
+    // req.session.save(() => {
       // declare session variables
       req.session.save(() => {
         req.session.staff_id = dbStaffData.id;
@@ -113,7 +113,7 @@ router.post('/login', (req, res) => {
       });
     });
   });
-});
+// });
 
 // update a staff member
 router.put('/:id', (req, res) => {
@@ -219,7 +219,6 @@ module.exports = router;
 //             res.status(500).json(err);
 //         });
 // });
-
  
 
 

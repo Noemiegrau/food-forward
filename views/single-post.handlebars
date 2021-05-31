@@ -1,0 +1,84 @@
+        <nav>
+          <!--Unordered list element-->
+          <ul>
+            <!--List item element-->
+                <!--Anchor element-->
+            <li>
+                {{!-- <a id="dashboard-button" href="">Dashboard</a> --}}
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="/allCustomer">Customers</a>
+            </li>
+            <li>
+                <a href="/packages">Packages</a>
+            </li>
+            <li>
+                <a href="/chat">Chat</a>
+            </li>
+            <li>
+                <a href="/contact-us">Contact Us</a>
+            </li>
+            <li>
+                <a id="logout" href="">Logout</a>
+            </li>
+          </ul>  
+        </nav>
+
+{{!-- Post section --}}
+<ol class="post-list">
+  <li>
+<ol class="post-list">
+    <article class="post">
+      <div class="text">
+        <p>{{posts.post_text}}</p>
+      </div>
+      <div class="meta">
+        By {{posts.staff.first_name}} {{posts.staff.last_name}} on
+        {{format_date posts.created_at}} | {{posts.comments.length}} {{format_plural "comment" posts.comments.length}} 
+        | {{posts.liked_count}} {{format_plural "like" posts.liked_count}}
+      </div>
+    </article>
+  <br>
+    {{!-- Create comment --}}
+      <h5>Comment on this post </h5>
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add Comment to Post</button>
+    <button type="button" class="btn uplike-btn">Like Post</button>
+  </div>
+</form>
+
+  <br>
+
+{{!-- Comment section --}}
+<div class="comments">
+  {{#each posts.comments as |comment|}}
+  <li>
+  <section class="comment">
+    <div class="meta">
+     By {{staff.first_name}} {{staff.last_name}} on {{format_date created_at}}
+    </div>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  </li>
+    <br>
+  {{/each}}
+</div>
+</li>
+</ol>
+
+
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/uplike.js"></script>
+  <script src="/javascript/logout.js"></script>
+
+
+

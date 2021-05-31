@@ -32,4 +32,14 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// // get login page
+// router.get('/login', (req, res) => {
+//   if (req.session.loggedIn) {
+//     res.redirect('/dashboard/' + req.session.staff_id);
+//     return;
+//   }
+  
+//   res.render('login');
+// });
+
 module.exports = router;

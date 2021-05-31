@@ -1,29 +1,14 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, Staff, Comment, Customer, Liked } = require('../models');
+const { Post, Staff, Comment, Customer } = require('../models');
+const Liked = require('../models/Liked');
 
-// get all posts for homepage
-// router.get('/', (req, res) => {
-//     res.render('chat')
-// });
-
-// router.get('/', (req, res) => {
-//   res.render('chat', {
-//     id: 122,
-//     post_text: 'this is a post text',
-//     created_at: new Date(),
-//     liked_count: 10,
-//     comments: [{}, {}],
-//     staff: {
-//       first_name: 'Noemie'
-//     }
-//   });
-// });
-
-// get all data related to chat, comment, post, likes
-// get all posts
-router.get('/', (req, res) => {
-    Post.findAll({
+// get one post
+router.get('/:id', (req, res) => {
+    Post.findOne({
+        where: {
+            id: req.params.id
+          },
       attributes: [
         'id',
         'post_text',
@@ -47,11 +32,16 @@ router.get('/', (req, res) => {
     })
 
       .then(dbPostData => {
-        const posts = dbPostData.map(post => post.get({ plain: true }));
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+          }
+
+        // serialize the data
+        const posts = dbPostData.get({ plain: true });
   
-        res.render('chat', { 
-          posts,
-          loggedIn: true
+        res.render('single-post', { 
+          posts
         });
 
       })

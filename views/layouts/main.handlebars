@@ -1,124 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <!-- jQuery CDN -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> --}}
+  {{!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> --}}
+  {{!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> --}}
   <title>Food Bank</title>
-  <link rel="stylesheet" href="/stylesheets/login.css">
-  <link rel="stylesheet" href="/stylesheets/dashboard.css">
-  <link rel="stylesheet" href="/stylesheets/allCustomer.css">
-  <link rel="stylesheet" href="/stylesheets/single-customer.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="/stylesheets/login.css"></link>
+  <link rel="stylesheet" href="/stylesheets/dashboard.css"></link>
+  <link rel="stylesheet" href="/stylesheets/allCustomer.css"></link>
+  <link rel="stylesheet" href="/stylesheets/single-customer.css"></link>
+  <link rel="stylesheet" href="/stylesheets/chat.css"></link>
+  <link rel="stylesheet" href="/stylesheets/main-page.css"></link> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
   ></link>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
+  {{!-- <div class="wrap">
+    <header>
+      <nav>
+        <h1><a href="/">Food Bank</a></h1>
+        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/login">login</a>
+      </nav>
+    </header>
+</div> --}}
 
-  <nav class="white" role="navigation" style ="height: 100px;">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img class="img-fluid" src="banner.png" style=" height: 100px;" alt=""></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/dashboard">dashboard</a></li>
-        <li><a href="/packages">packages</a></li>
-        <li><a href="/login">logout</a></li>
-      </ul>
+<header>
+        <h1>
+            <a href="/">
+                Food Forward Logo
+            </a>
+        </h1>
+</header>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="/dashboard">dashboard</a></li>
-        <li><a href="/packages">packages</a></li>
-        <li><a href="/login">logout</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  {{{ body }}}
-  <footer class="page-footer amber">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">No one in our community should be hungry." By bringing together the resources, the experience and the passion of the people and businesses of Southern Nevada, we can make sure children, individuals and seniors receive the food they need. </p>
+    <main>
+      {{{ body }}}
+    </main>
 
-
+    <footer>
+        <div class="">
+          <h5 class="">Company Bio</h5>
+          <p class="">No one in our community should be hungry. By bringing together the resources, the experience and the passion of the people and businesses of Southern Nevada, we can make sure children, individuals and seniors receive the food they need. </p>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  
-  </footer>
+    </footer>
+  </div>
 
+  <script src="/javascript/logout.js"></script>
+   {{!-- <script src="/javascript/main.js"></script> --}}
+</body>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="/javascript/materialize.js"></script>
-  <script src="/javascript/init.js"></script>
-  {{!-- <script src="/javascript/contact-us.js" ></script> --}}
-  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-  {{!-- // <div class="wrap">
-   // <header>
-    //  <nav>
-     //   <h1><a href="/">Food Bank</a></h1>
-   //     <button id="logout" class="btn-no-style">logout</button>
-    //    <a href="/login">login</a>
-   //   </nav>
-
-   // </header>
-   // <main>
-    //  {{{ body }}}
-   // </main>
-   // <footer>
-  //    Thanks for visiting!
-  //  </footer>
- // </div>
-//  <script src="/javascript/logout.js"></script>
-// </body>
-
-// </html>
- --}}
