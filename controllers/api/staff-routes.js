@@ -70,7 +70,7 @@ router.post('/', (req, res) => {
         req.session.staff_id = dbStaffData.id;
         // req.session.user_id = dbStaffData.id; ??
         req.session.email = dbStaffData.email;
-        req.session.loggedIn = false;
+        req.session.loggedIn = true;
 
         res.json(dbStaffData);
       })
