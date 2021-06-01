@@ -627,4 +627,26 @@ footer p {
     margin: 0px;
 }
 
+#container-welcome-page {
+    padding: 0;
+}
+
+#img-welcome{
+    max-width: 95%;
+}
+
+header h1 img {
+    max-width: 95%;
+}
+
+/* .col-rightt {
+    padding: 0;
+}
+
+p #slogan {
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+} */
+
   }
