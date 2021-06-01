@@ -23,11 +23,12 @@ nav {
 }
 
 header h1 {
-    font-weight: bold;
+    font-weight: normal;
     margin: 0;
     font-size: 36px;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #FFC107;
+    text-shadow: 0 0 2px #ff6a07;
+    margin-top: 4%;
 }
 
 header a {
