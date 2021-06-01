@@ -1,32 +1,14 @@
-<article class="post">
-  <div class="post_text">
-    <p>{{post_id}}</p>
-    <p>{{post_text}}</p>
-  </div>
-  <div class="meta">
-    By {{staff.first_name}} {{staff.last_name}} on {{format_date created_at}} | {{liked_count}} {{format_plural "like" liked_count}}
-    {{!-- {{like_count}} {{format_plural "like" like_count}} By {{staff.first_name}} {{staff.last_name}} on {{format_date created_at}} --}}
-    |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-  </div>
-</article>
+    <article class="post">
+      <div class="text">
+        <p>{{post_text}}</p>
+      </div>
+      <div class="meta">
+        By {{staff.first_name}} {{staff.last_name}} on
+        {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}} 
+        | {{liked_count}} {{format_plural "like" liked_count}}
+      </div>
 
-{{!-- {{#if loggedIn}} --}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+      <a href="/single-post/{{id}}">See post</a>
+    </article>
 
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="uplike-btn">like post</button>
-  </div>
-</form>
-{{!-- {{/if}} --}}
-
-{{> comments post.comments}}
-
-{{!-- {{#if loggedIn}} --}}
-<script src="/javascript/comment.js"></script>
-<script src="/javascript/uplike.js"></script>
-{{!-- {{/if}} --}}
+    

@@ -1,34 +1,94 @@
-<h1>Chat Page</h1>
+<div id ="alert" class="alert alert-success hide" role="alert">
 
-<section>
-  <h2>Create New Post</h2>
+  <div class="alert-content">
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Write your new post here: </label>
-      <input type="text" id="post-text" name="post-text" />
-      <button type="submit" class="btn">Post</button>
-      {{post_text}}
+    <div class="alert-header">
+      <button id ="delete-btn" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-  </form>
-</section>
 
-<ol class="post-list">
-{{#each posts as |post|}}
-  <li>
-    <article class="post">
-      <div class="text">
-        <p>{{post_text}}</p>
-      </div>
-      <div class="meta">
-        By {{post.staff.first_name}} {{post.staff.last_name}} on
-        {{format_date created_at}} | {{liked_count}} {{format_plural "like" liked_count}}
-        |
-        <p>{{comments.length}} {{format_plural "comment" comments.length}}</p>
-      </div>
-    </article>
-  </li>
-  {{/each}}
-</ol>
+    <div class="alert-body">
+      <p id="alert-message">Posted successfully, have a look at the end of the list!</p>
+    </div>
 
-<script src="/javascript/chat.js" ></script>
+  </div>
+  
+</div>
+
+        <nav>
+          <!--Unordered list element-->
+          <ul>
+            <!--List item element-->
+                <!--Anchor element-->
+            <li>
+                {{!-- <a id="dashboard-button" href="">Dashboard</a> --}}
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="/allCustomer">Customers</a>
+            </li>
+            <li>
+                <a href="/packages">Packages</a>
+            </li>
+            <li>
+                <a href="/contact-us">Contact Us</a>
+            </li>
+            <li>
+                <button id="logout-chat" href="">Logout</button>
+            </li>
+          </ul>  
+        </nav>
+
+<div id="main-container" class="">
+
+<h1 id="chat-page-title">Chat</h1>
+
+<div id="create-post">
+
+  <section>
+    {{!-- Create post --}}
+    <h2 id="title-create-post">Create New Post</h2>
+
+    <form class="new-post-form">
+      <div>
+        <label for="post-title">Write your new post here: </label>
+        <input type="text" id="post-text" name="post_text" />
+        <button id="post-post-btn" type="submit" class="btn btn-info btn-lg">Post</button>
+  <br>
+  <br>
+      </div>
+    </form>
+  </section>
+</div>
+
+  {{!-- add if loggedin ? --}}
+  <ol class="post-list">
+  {{#each posts as |post|}}
+    <li>
+
+
+  <article class="post">
+        <div class="text">
+          <p>{{post_text}}</p>
+        </div>
+        <div id="post-info" class="meta">
+          By <span id="post-name">{{staff.first_name}} {{staff.last_name}} </span> on
+          {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}} 
+          | {{liked_count}} {{format_plural "like" liked_count}}
+        </div>
+
+        <a href="/single-post/{{post.id}}">See full post</a>
+
+  </article>
+
+    </li>
+    <br>
+    {{/each}}
+  </ol>
+  {{!-- {{/if}} --}}
+
+</div>
+
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/logout-chat.js"></script>

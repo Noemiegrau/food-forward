@@ -10,6 +10,8 @@ const loginRoutes = require('./login-routes.js');
 const chatRoutes = require('./chat-routes.js');
 const allCustomerRoutes = require('./allCustomer-routes.js');
 const singleCustomerRoutes = require('./single-customer-routes.js');
+const singlePostRoutes = require('./single-post-routes.js');
+// const editCustomerRoutes = require('./edit-customer-routes.js');
 // const withAuth = require('../utils/auth');
 
 router.use('/contact-us', contactUsRoutes);
@@ -22,6 +24,8 @@ router.use('/login', loginRoutes);
 router.use('/chat', chatRoutes);
 router.use('/allCustomer', allCustomerRoutes);
 router.use('/single-customer', singleCustomerRoutes);
+router.use('/single-post', singlePostRoutes);
+// router.use('/edit-customer', editCustomerRoutes);
 
 router.use((req, res) => {
     res.status(404).end();

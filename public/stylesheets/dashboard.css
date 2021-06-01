@@ -6,8 +6,8 @@ body {
 }
 
 .admin-sidenav {
-    /* width: auto;
-	height: auto; */
+    width: 50%;
+	height: auto;
 	margin-left: 0px; 
 }
 .admin-sidenav a {
@@ -19,11 +19,11 @@ body {
 	padding-left: 1rem;
 	-webkit-transition: all .2s linear;
 	transition: all .2s linear;
-	background-color: blue;
-	border: 1px solid blue; 
+	background-color: rgb(235, 50, 50);
+	/* border: 1px solid blue;  */
 }
 .admin-sidenav li a {
-	color: rgb(27, 12, 235); 
+	color: #fff; 
 }
 
 .admin-sidenav li a:active {
@@ -35,20 +35,11 @@ body {
 	border-color: #02d3f5;
 	-webkit-transform: translate(30px, 0px);
 	transform: translate(30px, 0px);
-	background: -webkit-linear-gradient(left, #006a7b, #002340);
-	background: linear-gradient(to right, #006a7b, #002340); 
+	background-color: rgb(235, 50, 50);
+	/* background: -webkit-linear-gradient(left, #006a7b, #002340);
+	background: linear-gradient(to right, #006a7b, #002340);  */
 }
 
 .admin-sidenav li:active {
 	border-color: #02d3f5; 
-}
-
-#admin-sidebar{
-	width: 50%;
-	
-	
-}
-
-.dashboardout{
-	margin-top: 60px;
 }

@@ -1,0 +1,83 @@
+        <nav>
+          <!--Unordered list element-->
+          <ul>
+            <!--List item element-->
+                <!--Anchor element-->
+            <li>
+                {{!-- <a id="dashboard-button" href="">Dashboard</a> --}}
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="/allCustomer">Customers</a>
+            </li>
+            <li>
+                <a href="/packages">Packages</a>
+            </li>
+            <li>
+                <a href="/chat">Chat</a>
+            </li>
+            <li>
+                <a href="/contact-us">Contact Us</a>
+            </li>
+            <li>
+                <button id="logout-single-post" href="">Logout</button>
+            </li>
+          </ul>  
+        </nav>
+
+{{!-- Post section --}}
+<ol class="post-list">
+  <li>
+<ol class="post-list">
+    <article class="post">
+      <div class="text">
+        <p>{{posts.post_text}}</p>
+      </div>
+      <div id="post-name-single" class="meta">
+        By <span id="post-name">{{posts.staff.first_name}} {{posts.staff.last_name}} </span> on
+        {{format_date posts.created_at}} | {{posts.comments.length}} {{format_plural "comment" posts.comments.length}} 
+        | {{posts.liked_count}} {{format_plural "like" posts.liked_count}}
+      </div>
+    </article>
+  <br>
+    {{!-- Create comment --}}
+    <div id="create-comment">
+            <form class="comment-form">
+              <div>
+                <h5 id="title-create-comment">Comment On This Post </h5>
+                <label for="post-title">Write your comment here: </label>
+                <input name="comment-body"></input>
+                <button id="post-comment-btn" type="submit" class="btn btn-info btn-lg">Add Comment to Post</button>
+                <button id="btn-like" type="button" class="btn uplike-btn">Like Post</button>
+              </div>
+            </form>
+    </div>
+  <br>
+
+{{!-- Comment section --}}
+<div class="comments">
+  {{#each posts.comments as |comment|}}
+  <li>
+  <section class="comment">
+        <div class="text">
+      {{comment_text}}
+    </div>
+    <div id="comment-info" class="meta">
+     By <span id="post-name">{{staff.first_name}} {{staff.last_name}} </span> on {{format_date created_at}}
+    </div>
+  </section>
+  </li>
+    <br>
+  {{/each}}
+</div>
+</li>
+</ol>
+
+
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/uplike.js"></script>
+  <script src="/javascript/logout-single-post.js"></script>
+
+
+

@@ -1,25 +1,110 @@
+{{!-- Add customer alert message--}}
+<div id ="alert-add" class="alert alert-success hide" role="alert">
+
+  <div class="alert-content">
+
+    <div class="alert-header">
+      <button id ="delete-btn-add" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="alert-body">
+      <p id="alert-message">New customer added successfully.</p>
+    </div>
+
+  </div>
+
+</div>
+
+        <nav>
+          <!--Unordered list element-->
+          <ul>
+            <!--List item element-->
+                <!--Anchor element-->
+            <li>
+                {{!-- <a id="dashboard-button" href="">Dashboard</a> --}}
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="/packages">Packages</a>
+            </li>
+            <li>
+                <a href="/chat">Chat</a>
+            </li>
+            <li>
+                <a href="/contact-us">Contact Us</a>
+            </li>
+            <li>
+                <button id="logout-allCustomer" href="">Logout</button>
+            </li>
+          </ul>  
+        </nav>
+
+<div id="main-container" class="">
 <div class="container-fluid">
         <div class="row">    
-            <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
+            {{!-- <div id="admin-sidebar" class="col-md-2 p-x-0 p-y-3">
                 <ul class="sidenav admin-sidenav list-unstyled">
-                    <li><h4><a href="#">Add a new customer</a></h4></li>               
+                    <li><h4><a href="/dashboard">View dashboard</a></h4></li>       
+                    <li><h4><a id="dashboard-button" href="">View dashboard</a></h4></li>
                 </ul>
-            </div> 
-            <div id="admin-main-control" class="col-md-10 p-x-3 p-y-1">
+            </div>  --}}
+            <div id="admin-main-control" class="col">
+
+                <section class="color-new-form">
+                {{!-- Create post --}}
+                <h2 id="title-new-cus">Add New Customer</h2>
+                    <p>Please fill all the fields.</p>
+
+                <form class="new-customer-form">
+                      <label for="first_name">Add first name: </label>
+                      <input type="text" id="customer-text" class="form-control" placeholder="First Name *" name="first_name" />
+                  </br>
+                      <label for="last_name">Add last name: </label>
+                      <input type="text" id="customer-text" class="form-control" placeholder="Last Name *" name="last_name" />
+                  </br>
+                      <label for="age">Add age: </label>
+                      <input type="text" id="customer-text" class="form-control" placeholder="Age *" name="age" />
+                  </br>
+                      <label for="household">Add number of people in household: </label>
+                      <input type="text" id="customer-text" class="form-control" placeholder="Household *" name="household" />
+                  </br>
+                      <label for="package">Add type of food package received: </label>
+                      <input type="text" id="customer-text" class="form-control" placeholder="Package received *" name="package" />
+                  </br>
+                      <label for="date_received">Add date of package reception: </label>
+                      <input type="text" id="customer-text" class="form-control" placeholder="Date received *" name="date_received" />
+                  </br>
+                    <div class="form-group">
+                      <button id="text-new-btn" type="submit" class="btn btnSubmit">Confirm new customer information</button>
+                    </div>
+                  </br>
+                </form>
+                </section>
+
 
                 <div class="main-content">
-                    <h3>Customers List</h3>
+                    <h3 id="customer-list-title" >Customers List</h3>
+                    <div id="row-customer" class="row">
                     {{#each customers as |customer|}}
-                    <section class="customers">
-                        <div class="meta">
-                        <a href="http://localhost:3000/single-customer/{{customer.id}}">{{customer.first_name}} {{customer.last_name}}</a>
-                        </div>
-                    </section>
+                    <div id="card-single" class="card border-warning" style="width: 18rem;">
+                      <div class="card-body">
+                        <section class="customers">
+                            <div id="customers-all" class="meta">
+                            <a href="/single-customer/{{customer.id}}">{{customer.first_name}} {{customer.last_name}}</a>
+                            </div>
+                        </section>
+                      </div>
+                    </div>
                     {{/each}}
-
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
-        <script src="/javascript/allCustomer.js" ></script>
+</div>
+    <script src="/javascript/allCustomer.js" ></script>
+      <script src="/javascript/logout.js"></script>
+            <script src="/javascript/logout-allCustomer.js"></script>
