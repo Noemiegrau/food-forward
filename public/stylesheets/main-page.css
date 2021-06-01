@@ -12,8 +12,8 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
     top: 0;
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
@@ -58,16 +58,17 @@ nav ul {
 nav ul li a {
     padding: 10px 15px;
     font-weight: normal;
-    font-size: 1.55vw;
+    font-size: 15px;
     color: #FFC107;
-    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
 nav ul li button {
     padding: 10px 15px;
-    font-weight: lighter;
-    font-size: 1.55vw;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+    font-size: 15px;
+    color: #FFC107;
+    border: none;
+    background-color: white;
 }
 
 nav ul li a:hover {
@@ -235,6 +236,23 @@ margin-left: 10%;
     font-size: 22px;
 }
 
+#section-add-new-customer label {
+    font-size: 15px;
+}
+
+#section-add-new-customer input {
+    font-size: 14px;
+}
+
+#section-add-new-customer .btn {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#section-add-new-customer p {
+    font-size: 12px;
+}
+
 /* CONTACT US */
 
 #container-contact-us {
@@ -254,6 +272,26 @@ margin-left: 10%;
 
 #row-dashboard {
     padding: 10%;
+}
+
+#img-contact-us {
+    margin-left: 200px;
+}
+
+#container-contact-form {
+    font-size: 16px;
+}
+
+#submit-contact-btn {
+    font-size: 14px;
+}
+
+#container-contact-form input {
+    font-size: 14px;
+}
+
+#container-contact-form textarea {
+    font-size: 14px;
 }
 
 /* CHAT */
@@ -345,4 +383,247 @@ margin-left: 10%;
 z-index: 1040 !important;
 }
 
+#create-post h2 {
+    font-size: 20px;
+}
+
+#create-post label {
+    font-size: 14px;
+}
+
+#post-list-id {
+    font-size: 15px;
+}
+
+#create-comment h2 {
+    font-size: 20px;
+}
+
+#create-comment label {
+    font-size: 14px;
+}
+
+#post-id-list-single {
+    font-size: 15px;
+}
+
 /* PACKAGES */
+
+#card-packages-one {
+    margin: 21px;
+    border: 3px solid #FFC107;
+}
+
+#card-packages-one li {
+    font-size: 12px;
+}
+
+#card-packages-two {
+    margin: 21px;
+    border: 3px solid #FFC107;
+}
+
+#card-packages-two li {
+    font-size: 12px;
+}
+
+#card-packages-three {
+    margin: 21px;
+    border: 3px solid #FFC107;
+}
+
+#card-packages-three li {
+    font-size: 12px;
+}
+
+#packages-space h5 {
+    font-size: 18px;
+}
+
+#packages-space p {
+    font-size: 12px;
+}
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+
+#dashboard-title {
+    font-size: 22px;
+}
+
+nav ul li a {
+    font-size: 24px;
+}
+
+nav ul li button {
+    font-size: 24px;
+}
+
+footer h5 {
+    font-size: 16px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.container-fluid {
+    margin-bottom: 29%;
+}
+
+#login-btn-welcome {
+    font-size: 16px;
+}
+
+#slogan {
+    padding: 10px 15px;
+    font-size: 26px;
+    margin-left: 40px;
+}
+
+#img-contact-us {
+    margin-left: 200px;
+}
+
+#container-contact-form {
+    font-size: 16px;
+}
+
+#submit-contact-btn {
+    font-size: 14px;
+}
+
+#container-contact-form input {
+    font-size: 14px;
+}
+
+#container-contact-form textarea {
+    font-size: 14px;
+}
+
+#section-add-new-customer label {
+    font-size: 15px;
+}
+
+#section-add-new-customer input {
+    font-size: 14px;
+}
+
+#section-add-new-customer .btn {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#section-add-new-customer p {
+    font-size: 12px;
+}
+
+#form-update-customer h3{
+    font-size: 26px;
+}
+
+#form-update-customer p{
+    font-size: 14px;
+}
+
+#form-update-customer input{
+    font-size: 13px;
+}
+
+#card-single .list-group-item {
+    font-size: 13px;
+}
+
+#create-post h2 {
+    font-size: 20px;
+}
+
+#create-post label {
+    font-size: 14px;
+}
+
+#post-list-id {
+    font-size: 15px;
+}
+
+#create-comment h2 {
+    font-size: 20px;
+}
+
+#create-comment label {
+    font-size: 14px;
+}
+
+#post-id-list-single {
+    font-size: 15px;
+}
+
+  }
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+
+.container-fluid {
+    margin-bottom: 7%;
+}
+
+nav ul li a {
+    font-size: 20px;
+}
+
+nav ul li button {
+    font-size: 20px;
+}
+
+footer h5 {
+    font-size: 14px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+#customers-all a {
+    font-size: 14px;
+}
+
+#card-single .list-group-item {
+    font-size: 12px;
+}
+
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+
+nav ul li a {
+    font-size: 22px;
+}
+    
+nav ul li button {
+    font-size: 22px;
+}
+
+#img-contact-us {
+    margin-left: 12px;
+}
+
+
+footer h5 {
+    font-size: 12px;
+}
+
+footer p {
+    font-size: 10px;
+}
+
+#dashboard-title {
+    font-size: 18px;
+}
+
+#bigger {
+    margin: 0px;
+}
+
+  }
