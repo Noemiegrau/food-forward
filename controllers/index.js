@@ -12,7 +12,7 @@ const allCustomerRoutes = require('./allCustomer-routes.js');
 const singleCustomerRoutes = require('./single-customer-routes.js');
 const singlePostRoutes = require('./single-post-routes.js');
 // const editCustomerRoutes = require('./edit-customer-routes.js');
-// const withAuth = require('../utils/auth');
+// const withAuth = require('../../utils/auth');
 
 router.use('/contact-us', contactUsRoutes);
 router.use('/welcome-page', welcomePage);
