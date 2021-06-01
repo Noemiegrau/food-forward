@@ -42,11 +42,13 @@
 
 <div id="main-container" class="">
 
-  <h1>Chat Page</h1>
+<h1 id="chat-page-title">Chat</h1>
+
+<div id="create-post">
 
   <section>
     {{!-- Create post --}}
-    <h2>Create New Post</h2>
+    <h2 id="title-create-post">Create New Post</h2>
 
     <form class="new-post-form">
       <div>
@@ -58,7 +60,7 @@
       </div>
     </form>
   </section>
-
+</div>
 
   {{!-- add if loggedin ? --}}
   <ol class="post-list">
@@ -70,8 +72,8 @@
         <div class="text">
           <p>{{post_text}}</p>
         </div>
-        <div class="meta">
-          By {{staff.first_name}} {{staff.last_name}} on
+        <div id="post-info" class="meta">
+          By <span id="post-name">{{staff.first_name}} {{staff.last_name}} </span> on
           {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}} 
           | {{liked_count}} {{format_plural "like" liked_count}}
         </div>

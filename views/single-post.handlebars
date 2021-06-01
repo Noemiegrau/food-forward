@@ -33,26 +33,25 @@
       <div class="text">
         <p>{{posts.post_text}}</p>
       </div>
-      <div class="meta">
-        By {{posts.staff.first_name}} {{posts.staff.last_name}} on
+      <div id="post-name-single" class="meta">
+        By <span id="post-name">{{posts.staff.first_name}} {{posts.staff.last_name}} </span> on
         {{format_date posts.created_at}} | {{posts.comments.length}} {{format_plural "comment" posts.comments.length}} 
         | {{posts.liked_count}} {{format_plural "like" posts.liked_count}}
       </div>
     </article>
   <br>
     {{!-- Create comment --}}
-      <h5>Comment on this post </h5>
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">Add Comment to Post</button>
-    <button type="button" class="btn uplike-btn">Like Post</button>
-  </div>
-</form>
-
+    <div id="create-comment">
+            <form class="comment-form">
+              <div>
+                <h5 id="title-create-comment">Comment On This Post </h5>
+                <label for="post-title">Write your comment here: </label>
+                <input name="comment-body"></input>
+                <button id="post-comment-btn" type="submit" class="btn btn-info btn-lg">Add Comment to Post</button>
+                <button id="btn-like" type="button" class="btn uplike-btn">Like Post</button>
+              </div>
+            </form>
+    </div>
   <br>
 
 {{!-- Comment section --}}
@@ -60,11 +59,11 @@
   {{#each posts.comments as |comment|}}
   <li>
   <section class="comment">
-    <div class="meta">
-     By {{staff.first_name}} {{staff.last_name}} on {{format_date created_at}}
-    </div>
-    <div class="text">
+        <div class="text">
       {{comment_text}}
+    </div>
+    <div id="comment-info" class="meta">
+     By <span id="post-name">{{staff.first_name}} {{staff.last_name}} </span> on {{format_date created_at}}
     </div>
   </section>
   </li>

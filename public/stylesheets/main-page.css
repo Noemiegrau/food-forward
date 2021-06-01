@@ -1,3 +1,9 @@
+/* GENERAL */
+
+body{
+overflow: scroll;
+}
+
 /* HEADER / NAV BAR STYLES START */
 
 nav {
@@ -36,7 +42,9 @@ header {
 
 nav {
     margin: 7px 0;
-    /* text-align: center; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    /* box-shadow: 0 4px 2px -1px gray; */
+    /* padding: 0.2%; */
 }
 
 nav ul {
@@ -49,9 +57,10 @@ nav ul {
 
 nav ul li a {
     padding: 10px 15px;
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 1.55vw;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #FFC107;
+    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
 nav ul li button {
@@ -160,3 +169,185 @@ margin-left: 10%;
     padding-left: 25%;
     /* padding-top: 15px; */
 } 
+
+/* SINGLE CUSTOMER */
+
+#delete-single-customer {
+    color: white;
+}
+
+#form-update-customer {
+    background-color: #FFC107;
+    margin-bottom: 10%;
+}
+
+#card-single {
+    margin: 10%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    border-width: 5px;
+}
+
+#text-update-btn {
+    color: #FFC107;
+}
+
+.categories {
+    font-weight: bold;
+}
+
+/* CUSTOMER */
+
+#form-update-customer {
+    background-color: #FFC107;
+    margin-bottom: 10%;
+}
+
+.color-new-form {
+    background-color: #FFC107;
+    padding: 4%;
+    margin: 5%;
+}
+
+#title-new-cus {
+    text-align: center;
+    color: white;
+}
+
+#text-new-btn {
+    color: #FFC107;
+    background-color: white;
+}
+
+#customers-all a {
+    color: black;
+    font-weight: normal;
+    font-size: 1.5vw;
+}
+
+#row-customer {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#customer-list-title {
+    color: #FFC107;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* CONTACT US */
+
+#container-contact-us {
+    margin-bottom: 2%;
+}
+
+#submit-contact-btn {
+    color: white;
+    font-weight: normal;
+}
+
+/* DASHBOARD */
+
+#dashboard-title {
+    text-align: center;
+}
+
+#row-dashboard {
+    padding: 10%;
+}
+
+/* CHAT */
+
+#main-container {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 8%;
+}
+
+#chat-page-title {
+    /* color:#FFC107; */
+    color:#0084ff;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+#title-create-post {
+    font-size: 16px;
+    color:#43a4ff;
+    text-align: center;
+}
+
+#create-post {
+    background-color: #9bcfff;
+    padding-top: 2%;
+    padding-left: 2%;
+    margin-bottom: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 15px;
+}
+
+.new-post-form {
+    text-align: center;
+}
+
+#post-name {
+    font-style: italic;
+}
+
+#post-info{
+    color: rgb(134, 134, 134);
+}
+
+#comment-info{
+    color: rgb(134, 134, 134);
+}
+
+#post-name-single {
+    color: rgb(134, 134, 134);
+}
+
+#btn-like {
+    background-color: rgb(255, 108, 132);
+    padding: 0.6%;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+#btn-like:hover {
+    background-color: rgb(206, 90, 109);
+    padding: 0.6%;
+}
+
+#create-comment {
+    background-color: #9bcfff;
+    padding: 2%;
+    margin-bottom: 4%;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#title-create-comment {
+    font-size: 16px;
+    color:#43a4ff;
+    text-align: center;
+}
+
+.first-plan{
+    z-index: 1060;
+}
+
+.second-plan {
+z-index: 1040 !important;
+}
+
+/* PACKAGES */
+
+#coming-soon-packages {
+    text-align: center;
+    padding: 2%;
+}

@@ -16,6 +16,9 @@ async function newFormHandler(event) {
     if (response.ok) {
       document.getElementById('alert').classList.remove('hide');
       document.getElementById("main-container").classList.add("blur");
+      document.getElementById('alert').classList.add('first-plan');
+      document.getElementById("main-container").classList.add("second-plan");
+      document.getElementById("create-post").classList.add("second-plan");
       console.log('bravo');
     } else {
       alert(response.statusText);
