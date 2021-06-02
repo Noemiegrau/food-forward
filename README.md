@@ -32,13 +32,13 @@ Project is created using:
 ## **_Installation_**
 Here are some guidelines for installing the project on your local machine in order to be able to try it: 
 
-1. Since Node.js applications don't have a front end, clone or download the repository to your own local machine and run it from your command line.
+1. Clone or download the repository to your own local machine and run it from your command line.
 
 2. Then, make sure that your repo includes a package.json with the required dependencies. You can create one by running ```npm init``` in your command line.
 
 3. Store your variables in an .env file. Some of the variables you will need are: ```DB_NAME```, ```DB_PW``` and ```DB_USER``` for your local database credentials, ```DB_EMAIL``` and ```DB_PASS``` for nodemailer/contact-from credentials. And don't forget to include your .env file into your .gitignore to keep your credentials secret.
 
-4. Run ```node server.js``` or ```node server``` in your terminal to launch the application. Or check the deployed app directly on our heroku link (https://stark-reaches-12893.herokuapp.com/).
+4. Run ```node server.js```, ```node server``` or ```npm run``` in your terminal to launch the application. Or check the deployed app directly on our heroku link (https://stark-reaches-12893.herokuapp.com/).
 
 5. Enjoy and don't hesitate to contribute!
 
