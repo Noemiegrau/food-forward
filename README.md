@@ -1,4 +1,4 @@
-# **_Food Bank_**
+# **_Food Forward_**
 
 ## **_Table of contents_**
 * [Description of the project](#description-of-the-project)
